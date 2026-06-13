@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melih & Zümra | Anılarımız</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#hero" aria-label="Ana sayfa">M <span>&</span> Z</a>
+      <nav aria-label="Bolumler">
+        <a href="#anilar">Anılar</a>
+        <a href="#notlar">Notlar</a>
+      </nav>
+      <button class="add-card-trigger" type="button" data-open-card-form>Kart ekle</button>
+    </header>
+
+    <main>
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h1 id="hero-title">Melih & Zümra</h1>
+          <div class="hero__actions">
+            <button class="button button--primary" type="button" data-open-card-form>Kart ekle</button>
+            <button class="button button--ghost" type="button" data-open-note-form>Not ekle</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section memories" id="anilar" aria-labelledby="memories-title">
+        <div class="section-heading">
+          <p class="section-kicker">Anı kartları</p>
+          <h2 id="memories-title">Birlikte biriktirdiklerimiz</h2>
+        </div>
+        <div class="memory-grid" id="memory-grid">
+          <article class="memory-card">
+            <figure class="photo-slot photo-slot--star">
+              <img src="assets/first-day-star-map.jpg" alt="Tanıştığımız günün yıldız haritası" />
+            </figure>
+            <span>İlk günümüz</span>
+            <h3>Yıldız haritamız</h3>
+            <p>Tanıştığımız günün gökyüzü burada dursun.</p>
+          </article>
+
+          <article class="memory-card memory-card--birds">
+            <div class="bird-pair" aria-label="Beraber çizdiğimiz kuş resimleri">
+              <figure class="photo-slot photo-slot--drawing">
+                <img src="assets/blue-bird.jpg" alt="Beraber çizdiğimiz mavi kuş resmi" />
+              </figure>
+              <figure class="photo-slot photo-slot--drawing">
+                <img src="assets/yellow-bird-zumra.jpg" alt="Zümra'nın çizdiği sarı kuş resmi" />
+              </figure>
+            </div>
+            <span>Beraber çizdiğimiz</span>
+            <h3>Kuşlarımız</h3>
+          </article>
+
+          <article class="memory-card memory-card--wide">
+            <div class="brawl-gallery" aria-label="Beraber Brawl Stars oynarken çekilen fotoğraflar">
+              <img src="assets/brawl-stars/brawl-stars-1.jpeg" alt="Beraber Brawl Stars oynarken çekilen fotoğraf 1" />
+              <img src="assets/brawl-stars/brawl-stars-2.jpeg" alt="Beraber Brawl Stars oynarken çekilen fotoğraf 2" />
+              <img src="assets/brawl-stars/brawl-stars-3.jpeg" alt="Beraber Brawl Stars oynarken çekilen fotoğraf 3" />
+              <img src="assets/brawl-stars/brawl-stars-4.jpeg" alt="Beraber Brawl Stars oynarken çekilen fotoğraf 4" />
+              <img src="assets/brawl-stars/brawl-stars-5.jpeg" alt="Beraber Brawl Stars oynarken çekilen fotoğraf 5" />
+              <img src="assets/brawl-stars/brawl-stars-6.jpeg" alt="Beraber Brawl Stars oynarken çekilen fotoğraf 6" />
+              <img src="assets/brawl-stars/brawl-stars-7.jpeg" alt="Beraber Brawl Stars oynarken çekilen fotoğraf 7" />
+              <img src="assets/brawl-stars/brawl-stars-8.jpeg" alt="Beraber Brawl Stars oynarken çekilen fotoğraf 8" />
+            </div>
+            <span>Beraber oynarken</span>
+            <h3>Brawl Stars anılarımız</h3>
+            <p>Beraber oynarken çektiğimiz fotoğraflar burada.</p>
+          </article>
+
+          <article class="memory-card memory-card--add">
+            <button class="empty-add" type="button" data-open-card-form>
+              <span>+</span>
+              <strong>Kart ekle</strong>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section notes" id="notlar" aria-labelledby="notes-title">
+        <div class="section-heading">
+          <p class="section-kicker">Açıldıkça gülümsetenler</p>
+          <h2 id="notes-title">Sevgi notlarımız</h2>
+          <button class="add-card-trigger" type="button" data-open-note-form>Not ekle</button>
+        </div>
+        <div class="note-board" id="note-board">
+          <button class="note note--add" type="button" data-open-note-form>
+            <span>+</span>
+            <strong>Not ekle</strong>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="card-dialog" id="card-dialog" aria-labelledby="card-dialog-title">
+      <form class="card-form" id="card-form" method="dialog">
+        <div class="card-form__header">
+          <div>
+            <p class="section-kicker">Yeni anı</p>
+            <h2 id="card-dialog-title">Kart ekle</h2>
+          </div>
+          <button class="icon-close" type="button" aria-label="Kapat" data-close-card-form>×</button>
+        </div>
+
+        <label>
+          Kart başlığı
+          <input name="title" type="text" placeholder="Mesela: İlk kahvemiz" maxlength="70" required />
+        </label>
+
+        <label>
+          Küçük etiket
+          <input name="tag" type="text" placeholder="Mesela: Bizim anımız" maxlength="36" required />
+        </label>
+
+        <label>
+          Anı yazısı
+          <textarea name="text" placeholder="Bu kartta ne saklansın?" maxlength="260" required></textarea>
+        </label>
+
+        <label>
+          Fotoğraf linki
+          <input name="imageUrl" type="url" placeholder="https://..." />
+        </label>
+
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+        <div class="card-form__actions">
+          <button class="button button--ghost" type="button" data-close-card-form>Vazgeç</button>
+          <button class="button button--primary" type="submit">Kaydet</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="card-dialog" id="note-dialog" aria-labelledby="note-dialog-title">
+      <form class="card-form" id="note-form" method="dialog">
+        <div class="card-form__header">
+          <div>
+            <p class="section-kicker">Yeni not</p>
+            <h2 id="note-dialog-title">Not ekle</h2>
+          </div>
+          <button class="icon-close" type="button" aria-label="Kapat" data-close-note-form>×</button>
+        </div>
+
+        <label>
+          Not başlığı
+          <input name="title" type="text" placeholder="Mesela: Bugünün cümlesi" maxlength="70" required />
+        </label>
+
+        <label>
+          Not yazısı
+          <textarea name="text" placeholder="Zümra buraya kendi notunu yazabilir." maxlength="260" required></textarea>
+        </label>
+
+        <p class="form-status" id="note-form-status" role="status" aria-live="polite"></p>
+
+        <div class="card-form__actions">
+          <button class="button button--ghost" type="button" data-close-note-form>Vazgeç</button>
+          <button class="button button--primary" type="submit">Kaydet</button>
+        </div>
+      </form>
+    </dialog>
+
+    <footer>
+      <p>Melih & Zümra</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
